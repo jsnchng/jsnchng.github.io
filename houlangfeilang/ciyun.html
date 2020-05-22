@@ -5,9 +5,11 @@
     <title>词云·后浪非浪</title>
 </head>
 <body>
-    <iframe scrolling="no" frameborder="0" height="470" width="100%" src="houlang.html" name="hl"></iframe>    
+    <iframe scrolling="no" frameborder="0" width="100%" src="houlang.html" name="hl"
+	onload=' this.style.height=Math.max(this.contentWindow.document.body.scrollHeight,this.contentWindow.document.documentElement.scrollHeight,200)/2+"px";'></iframe>
     <br />
     <br />
-    <iframe scrolling="no" frameborder="0" height="530" width="100%" src="feilang.html" name="fl"></iframe>
+    <iframe scrolling="no" frameborder="0" width="100%" src="feilang.html" name="fl"
+	onload=' this.style.height=Math.max(this.contentWindow.document.body.scrollHeight,this.contentWindow.document.documentElement.scrollHeight,200)/2+"px";'></iframe>
 </body>
 </html>
