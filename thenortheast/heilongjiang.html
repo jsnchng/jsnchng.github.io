@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="/js/echarts.min.js"></script>
+    <script src="/js/heilongjiang.js"></script>
+</head>
+
+<body>
+    <div id='main' style="width:100%;height:800px;"></div>
+    <script type="text/javascript">
+        var chart = echarts.init(document.getElementById('main'));
+        var option = {
+            title: {
+                text: '黑龙江省部分少数民族地理分布图',
+                subtext: '各民族内部数据使用百分比 总体数据可能含有误差',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['满族', '朝鲜族', '蒙古族', '回族', '达斡尔族', '锡伯族', '赫哲族', '鄂伦春族', '鄂温克族']
+            },
+            visualMap: {
+                min: 0,
+                max: 1,
+                left: 'left',
+                top: 'bottom',
+                text: ['100%', '0%'],
+                calculable: true
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            series: [
+                {
+                    name: '满族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.0632844075728568 },
+                        { name: '大兴安岭地区', value: 0.0093597106998511 },
+                        { name: '哈尔滨市', value: 0.360774303339715 },
+                        { name: '鹤岗市', value: 0.0207402680280791 },
+                        { name: '黑河市', value: 0.0339289512869602 },
+                        { name: '鸡西市', value: 0.0325462667517549 },
+                        { name: '佳木斯市', value: 0.061050840246756 },
+                        { name: '牡丹江市', value: 0.0951925122314401 },
+                        { name: '七台河市', value: 0.0270155286109338 },
+                        { name: '齐齐哈尔市', value: 0.105190385024463 },
+                        { name: '双鸭山市', value: 0.0461603914060838 },
+                        { name: '绥化市', value: 0.112635609444799 },
+                        { name: '伊春市', value: 0.0321208253563072 },
+
+                    ]
+                },
+                {
+                    name: '朝鲜族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.0436125048243921 },
+                        { name: '大兴安岭地区', value: 0.00501736781165573 },
+                        { name: '哈尔滨市', value: 0.351215746815901 },
+                        { name: '鹤岗市', value: 0.0177537630258587 },
+                        { name: '黑河市', value: 0.00810497877267464 },
+                        { name: '鸡西市', value: 0.0914704747201853 },
+                        { name: '佳木斯市', value: 0.0702431493631802 },
+                        { name: '牡丹江市', value: 0.272481667309919 },
+                        { name: '七台河市', value: 0.0196835198764956 },
+                        { name: '齐齐哈尔市', value: 0.0482439212659205 },
+                        { name: '双鸭山市', value: 0.025472790428406 },
+                        { name: '绥化市', value: 0.0239289849478966 },
+                        { name: '伊春市', value: 0.0227711308375145 },
+
+                    ]
+                },
+                {
+                    name: '蒙古族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.493122134222593 },
+                        { name: '大兴安岭地区', value: 0.0466861192163401 },
+                        { name: '哈尔滨市', value: 0.082534389328887 },
+                        { name: '鹤岗市', value: 0.00458524385160484 },
+                        { name: '黑河市', value: 0.0370987911629846 },
+                        { name: '鸡西市', value: 0.0262609420591913 },
+                        { name: '佳木斯市', value: 0.0258441017090454 },
+                        { name: '牡丹江市', value: 0.0291788245102126 },
+                        { name: '七台河市', value: 0.0150062526052522 },
+                        { name: '齐齐哈尔市', value: 0.158816173405586 },
+                        { name: '双鸭山市', value: 0.0233430596081701 },
+                        { name: '绥化市', value: 0.0416840350145894 },
+                        { name: '伊春市', value: 0.015839933305544 },
+
+                    ]
+                },
+                {
+                    name: '回族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.0734463276836158 },
+                        { name: '大兴安岭地区', value: 0.0188323917137476 },
+                        { name: '哈尔滨市', value: 0.270558694287508 },
+                        { name: '鹤岗市', value: 0.0753295668549906 },
+                        { name: '黑河市', value: 0.0332705586942875 },
+                        { name: '鸡西市', value: 0.026993094789705 },
+                        { name: '佳木斯市', value: 0.0571249215317012 },
+                        { name: '牡丹江市', value: 0.0634023854362837 },
+                        { name: '七台河市', value: 0.00941619585687382 },
+                        { name: '齐齐哈尔市', value: 0.175141242937853 },
+                        { name: '双鸭山市', value: 0.0470809792843691 },
+                        { name: '绥化市', value: 0.066541117388575 },
+                        { name: '伊春市', value: 0.0828625235404896 },
+
+                    ]
+                },
+                {
+                    name: '达斡尔族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.0524193548387097 },
+                        { name: '大兴安岭地区', value: 0.0497311827956989 },
+                        { name: '哈尔滨市', value: 0.0483870967741935 },
+                        { name: '鹤岗市', value: 0 },
+                        { name: '黑河市', value: 0.178763440860215 },
+                        { name: '鸡西市', value: 0.00268817204301075 },
+                        { name: '佳木斯市', value: 0.00672043010752688 },
+                        { name: '牡丹江市', value: 0.00537634408602151 },
+                        { name: '七台河市', value: 0.00268817204301075 },
+                        { name: '齐齐哈尔市', value: 0.627688172043011 },
+                        { name: '双鸭山市', value: 0 },
+                        { name: '绥化市', value: 0.021505376344086 },
+                        { name: '伊春市', value: 0.00403225806451613 },
+
+                    ]
+                },
+                {
+                    name: '锡伯族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.146596858638743 },
+                        { name: '大兴安岭地区', value: 0.0209424083769634 },
+                        { name: '哈尔滨市', value: 0.408376963350785 },
+                        { name: '鹤岗市', value: 0.0157068062827225 },
+                        { name: '黑河市', value: 0.0471204188481675 },
+                        { name: '鸡西市', value: 0.0366492146596859 },
+                        { name: '佳木斯市', value: 0.0366492146596859 },
+                        { name: '牡丹江市', value: 0.031413612565445 },
+                        { name: '七台河市', value: 0.0261780104712042 },
+                        { name: '齐齐哈尔市', value: 0.120418848167539 },
+                        { name: '双鸭山市', value: 0.0157068062827225 },
+                        { name: '绥化市', value: 0.0523560209424084 },
+                        { name: '伊春市', value: 0.0418848167539267 },
+
+                    ]
+                },
+                {
+                    name: '赫哲族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.0442477876106195 },
+                        { name: '大兴安岭地区', value: 0.00884955752212389 },
+                        { name: '哈尔滨市', value: 0.0530973451327434 },
+                        { name: '鹤岗市', value: 0.0176991150442478 },
+                        { name: '黑河市', value: 0.0265486725663717 },
+                        { name: '鸡西市', value: 0 },
+                        { name: '佳木斯市', value: 0.752212389380531 },
+                        { name: '牡丹江市', value: 0.0176991150442478 },
+                        { name: '七台河市', value: 0 },
+                        { name: '齐齐哈尔市', value: 0.00884955752212389 },
+                        { name: '双鸭山市', value: 0.0707964601769911 },
+                        { name: '绥化市', value: 0 },
+                        { name: '伊春市', value: 0 },
+
+                    ]
+                },
+                {
+                    name: '鄂伦春族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.072289156626506 },
+                        { name: '大兴安岭地区', value: 0.265060240963855 },
+                        { name: '哈尔滨市', value: 0.0481927710843374 },
+                        { name: '鹤岗市', value: 0 },
+                        { name: '黑河市', value: 0.373493975903614 },
+                        { name: '鸡西市', value: 0 },
+                        { name: '佳木斯市', value: 0.036144578313253 },
+                        { name: '牡丹江市', value: 0.0120481927710843 },
+                        { name: '七台河市', value: 0 },
+                        { name: '齐齐哈尔市', value: 0.0843373493975904 },
+                        { name: '双鸭山市', value: 0.0120481927710843 },
+                        { name: '绥化市', value: 0.0481927710843374 },
+                        { name: '伊春市', value: 0.0481927710843374 },
+
+                    ]
+                },
+                {
+                    name: '鄂温克族',
+                    type: 'map',
+                    mapType: '黑龙江',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '大庆市', value: 0.0434782608695652 },
+                        { name: '大兴安岭地区', value: 0.217391304347826 },
+                        { name: '哈尔滨市', value: 0.0869565217391304 },
+                        { name: '鹤岗市', value: 0 },
+                        { name: '黑河市', value: 0.246376811594203 },
+                        { name: '鸡西市', value: 0 },
+                        { name: '佳木斯市', value: 0.0289855072463768 },
+                        { name: '牡丹江市', value: 0 },
+                        { name: '七台河市', value: 0 },
+                        { name: '齐齐哈尔市', value: 0.36231884057971 },
+                        { name: '双鸭山市', value: 0.0144927536231884 },
+                        { name: '绥化市', value: 0 },
+                        { name: '伊春市', value: 0 },
+
+                    ]
+                },
+            ]
+        };
+        chart.setOption(option);
+    </script>
+</body>
+
+</html>

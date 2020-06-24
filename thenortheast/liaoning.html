@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="/js/echarts.min.js"></script>
+    <script src="/js/liaoning.js"></script>
+</head>
+
+<body>
+    <div id='main' style="width:100%;height:800px;"></div>
+    <script type="text/javascript">
+        var chart = echarts.init(document.getElementById('main'));
+        var option = {
+            title: {
+                text: '辽宁省部分少数民族地理分布图',
+                subtext: '各民族内部数据使用百分比 总体数据可能含有误差',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['满族', '蒙古族', '朝鲜族', '回族', '锡伯族']
+            },
+            visualMap: {
+                min: 0,
+                max: 1,
+                left: 'left',
+                top: 'bottom',
+                text: ['100%', '0%'],
+                calculable: true
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            series: [
+                {
+                    name: '满族',
+                    type: 'map',
+                    mapType: '辽宁',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '鞍山市', value: 0.173973255840352 },
+                        { name: '本溪市', value: 0.143800939905101 },
+                        { name: '朝阳市', value: 0.00256544146025836 },
+                        { name: '大连市', value: 0 },
+                        { name: '丹东市', value: 0.336345267555112 },
+                        { name: '抚顺市', value: 0.172838104751742 },
+                        { name: '阜新市', value: 0.00558494335596068 },
+                        { name: '葫芦岛市', value: 0 },
+                        { name: '锦州市', value: 0.164892047131473 },
+                        { name: '沈阳市', value: 0 },
+                        { name: '铁岭市', value: 0 },
+                        { name: '营口市', value: 0 }
+                    ]
+                },
+                {
+                    name: '朝鲜族',
+                    type: 'map',
+                    mapType: '辽宁',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '鞍山市', value: 0.0508058864751226 },
+                        { name: '本溪市', value: 0.0918009810791871 },
+                        { name: '朝阳市', value: 0.000350385423966363 },
+                        { name: '大连市', value: 0.0234758234057463 },
+                        { name: '丹东市', value: 0.0963559915907498 },
+                        { name: '抚顺市', value: 0.180098107918711 },
+                        { name: '阜新市', value: 0.000350385423966363 },
+                        { name: '葫芦岛市', value: 0 },
+                        { name: '锦州市', value: 0.00175192711983181 },
+                        { name: '沈阳市', value: 0.421864050455501 },
+                        { name: '铁岭市', value: 0.0795374912403644 },
+                        { name: '营口市', value: 0.0536089698668535 }
+                    ]
+                },
+                {
+                    name: '蒙古族',
+                    type: 'map',
+                    mapType: '辽宁',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '鞍山市', value: 0.00114717592280181 },
+                        { name: '本溪市', value: 0.00209190903569742 },
+                        { name: '朝阳市', value: 0.528983062284905 },
+                        { name: '大连市', value: 0 },
+                        { name: '丹东市', value: 0.0285444361967744 },
+                        { name: '抚顺市', value: 0.00101221404953101 },
+                        { name: '阜新市', value: 0.41359066063837 },
+                        { name: '葫芦岛市', value: 0.0209865712936096 },
+                        { name: '锦州市', value: 0.00364397057831163 },
+                        { name: '沈阳市', value: 0 },
+                        { name: '铁岭市', value: 0 },
+                        { name: '营口市', value: 0 }
+                    ]
+                },
+                {
+                    name: '回族',
+                    type: 'map',
+                    mapType: '辽宁',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '鞍山市', value: 0.13963963963964 },
+                        { name: '本溪市', value: 0.0765765765765766 },
+                        { name: '朝阳市', value: 0.148648648648649 },
+                        { name: '大连市', value: 0 },
+                        { name: '丹东市', value: 0.36036036036036 },
+                        { name: '抚顺市', value: 0.045045045045045 },
+                        { name: '阜新市', value: 0.0585585585585586 },
+                        { name: '葫芦岛市', value: 0 },
+                        { name: '锦州市', value: 0.171171171171171 },
+                        { name: '沈阳市', value: 0 },
+                        { name: '铁岭市', value: 0 },
+                        { name: '营口市', value: 0 }
+                    ]
+                },
+                {
+                    name: '锡伯族',
+                    type: 'map',
+                    mapType: '辽宁',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '鞍山市', value: 0 },
+                        { name: '本溪市', value: 0.0295566502463054 },
+                        { name: '朝阳市', value: 0 },
+                        { name: '大连市', value: 0 },
+                        { name: '丹东市', value: 0.561576354679803 },
+                        { name: '抚顺市', value: 0.0443349753694581 },
+                        { name: '阜新市', value: 0.0295566502463054 },
+                        { name: '葫芦岛市', value: 0 },
+                        { name: '锦州市', value: 0.334975369458128 },
+                        { name: '沈阳市', value: 0 },
+                        { name: '铁岭市', value: 0 },
+                        { name: '营口市', value: 0 }
+                    ]
+                },
+            ]
+        };
+        chart.setOption(option);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="/js/echarts.min.js"></script>
+    <script src="/js/jilin.js"></script>
+</head>
+
+<body>
+    <div id='main' style="width:100%;height:800px;"></div>
+    <script type="text/javascript">
+        var chart = echarts.init(document.getElementById('main'));
+        var option = {
+            title: {
+                text: '吉林省部分少数民族地理分布图',
+                subtext: '各民族内部数据使用百分比 总体数据可能含有误差',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['满族', '朝鲜族', '蒙古族', '回族', '锡伯族']
+            },
+            visualMap: {
+                min: 0,
+                max: 1,
+                left: 'left',
+                top: 'bottom',
+                text: ['100%', '0%'],
+                calculable: true
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            series: [
+                {
+                    name: '满族',
+                    type: 'map',
+                    mapType: '吉林',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '白城市', value: 0.0409301060647267 },
+                        { name: '白山市', value: 0.00435137340223008 },
+                        { name: '吉林市', value: 0.21049768833288 },
+                        { name: '辽源市', value: 0.0996736469948327 },
+                        { name: '四平市', value: 0.190100625509927 },
+                        { name: '松原市', value: 0.0424258906717433 },
+                        { name: '通化市', value: 0.148490617351101 },
+                        { name: '延边朝鲜族自治州', value: 0.0550720696219744 },
+                        { name: '长春市', value: 0.208457982050585 }
+                    ]
+                },
+                {
+                    name: '朝鲜族',
+                    type: 'map',
+                    mapType: '吉林',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '白城市', value: 0.00248618784530387 },
+                        { name: '白山市', value: 0.0220994475138122 },
+                        { name: '吉林市', value: 0.135635359116022 },
+                        { name: '辽源市', value: 0.0069060773480663 },
+                        { name: '四平市', value: 0.00883977900552486 },
+                        { name: '松原市', value: 0.00607734806629834 },
+                        { name: '通化市', value: 0.106353591160221 },
+                        { name: '延边朝鲜族自治州', value: 0.625414364640884 },
+                        { name: '长春市', value: 0.0861878453038674 }
+                    ]
+                },
+                {
+                    name: '蒙古族',
+                    type: 'map',
+                    mapType: '吉林',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '白城市', value: 0.385278514588859 },
+                        { name: '白山市', value: 0.0019893899204244 },
+                        { name: '吉林市', value: 0.0437665782493369 },
+                        { name: '辽源市', value: 0.00663129973474801 },
+                        { name: '四平市', value: 0.0676392572944297 },
+                        { name: '松原市', value: 0.38262599469496 },
+                        { name: '通化市', value: 0.0139257294429708 },
+                        { name: '延边朝鲜族自治州', value: 0.0125994694960212 },
+                        { name: '长春市', value: 0.0855437665782493 }
+                    ]
+                },
+                {
+                    name: '回族',
+                    type: 'map',
+                    mapType: '吉林',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '白城市', value: 0.0402597402597403 },
+                        { name: '白山市', value: 0.0194805194805195 },
+                        { name: '吉林市', value: 0.236363636363636 },
+                        { name: '辽源市', value: 0.0246753246753247 },
+                        { name: '四平市', value: 0.0649350649350649 },
+                        { name: '松原市', value: 0.0805194805194805 },
+                        { name: '通化市', value: 0.1 },
+                        { name: '延边朝鲜族自治州', value: 0.0584415584415584 },
+                        { name: '长春市', value: 0.375324675324675 }
+                    ]
+                },
+                {
+                    name: '锡伯族',
+                    type: 'map',
+                    mapType: '吉林',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    data: [
+                        { name: '白城市', value: 0.0666666666666667 },
+                        { name: '白山市', value: 0 },
+                        { name: '吉林市', value: 0.116666666666667 },
+                        { name: '辽源市', value: 0 },
+                        { name: '四平市', value: 0.0666666666666667 },
+                        { name: '松原市', value: 0.383333333333333 },
+                        { name: '通化市', value: 0.116666666666667 },
+                        { name: '延边朝鲜族自治州', value: 0.0333333333333333 },
+                        { name: '长春市', value: 0.216666666666667 }
+                    ]
+                },
+            ]
+        };
+        chart.setOption(option);
+    </script>
+</body>
+
+</html>
