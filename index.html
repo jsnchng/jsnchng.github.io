@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh" >
 <head>
-    <meta charset="utf-8">
-    <title>JDUHIF</title>
-	<style>
-		#div{display: flex;justify-content: center;}
-	</style>
+  <meta charset="utf-8">
+  <title>IPA元音练耳</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div id="div">
+  <div class="center">
+    <h1>国际音标元音练耳</h1> 
+    <h2>请据发音选择正确音标</h2>
     <div>
-	<p>下载全文请点击：</p>
-    <a href="https://jduhif.github.io/thenortheast/%E4%B8%9C%E5%8C%97%E4%B8%89%E7%9C%81%E6%B0%91%E6%97%8F%E4%B8%89%E8%B0%88%E2%80%94%E2%80%94%E4%BB%8E%E5%B0%91%E6%B0%91%E6%94%BF%E7%AD%96%E4%BC%98%E5%BE%85%E7%94%9F%E6%95%B0%E6%8D%AE%E7%9C%8B%E6%B0%91%E6%97%8F.pdf">东北三省民族三谈——从少民政策优待生数据看民族</a>
-    <br /><p>互动操作请点击：</p>
-    <a href="https://jduhif.github.io/thenortheast/heilongjiang.html">黑龙江省</a>
-    &nbsp;
-    <a href="https://jduhif.github.io/thenortheast/jilin.html">吉林省</a>
-    &nbsp;
-    <a href="https://jduhif.github.io/thenortheast/liaoning.html">辽宁省</a>	
+      <div class="box" id="box0" role="button" data-value="0"></div>
+      <div class="box" id="box1" role="button" data-value="1"></div>
+      <div class="box" id="box2" role="button" data-value="2"></div>
+      <div class="box" id="box3" role="button" data-value="3"></div>
     </div>
-    <div>
-	<p><embed width="800" height="800" src="/thenortheast/thenortheast.pdf"></embed></p>
+  </div>
+
+  <div id="dialog">
+    <div class="center">
+      <h2 id="correct">你选择的元音正确</h2>
+      <h2 id="incorrect">你选择的元音有误，请重新选择</h2>
+      <button style="font-size:3vmin;font-family:serif">继续</button>
     </div>
-	</div>
-    
-    
+  </div>
+
+  <script src="js/index.js"></script>
 </body>
 </html>

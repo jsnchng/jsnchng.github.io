@@ -1,0 +1,102 @@
+html, body {
+  background: #00caca;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  color: white;
+  font-size: 5vmin;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  font-family: serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3.5vmin;
+  margin-top: 5vmin;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  display: inline-block;
+  background: #00caca;
+  box-sizing: border-box;
+  border: 1vmin solid white;
+  border-radius: 2px;
+  width: 15vmin;
+  height: 15vmin;
+  margin-right: 3vmin;
+  cursor: pointer;
+  box-shadow: 0 1rem 0.75rem -0.75rem rgba(0,0,0,0.25);
+  position: relative;
+  
+  text-align: center;
+  color: white;
+  font-size: 5vmin;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  font-family: serif;
+  font-weight: bold;
+  line-height: 260%;
+}
+
+.box.right {
+  border-color: green;
+}
+
+.box.wrong {
+  border-color: red;
+}
+
+#dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0);
+  display: none;
+}
+
+#dialog.correct,
+#dialog.incorrect {
+  display: block;
+}
+
+#dialog > div {
+  padding: 3vmin;
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 0.5rem 1.5rem -0rem rgba(0,0,0,0.25);
+}
+
+#dialog h2 {
+  color: #444;
+  margin-top: 0;
+  display: none;
+}
+
+#dialog.correct #correct,
+#dialog.incorrect #incorrect {
+  display: block;
+}
+
+#dialog button {
+  width: 100%;
+  text-align: center;
+  font-size: 2vmin;
+  padding: 1.5vmin;
+  border-radius: 3px;
+  border: 0;
+  background: #396;
+  color: white;
+  box-shadow: 0 1rem 0.75rem -0.75rem rgba(0,0,0,0.25);
+  cursor: pointer;
+}
