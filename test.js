@@ -65,7 +65,8 @@ class test {
         extrainfo = extrainfo ? `<span class="star">${extrainfo}</span>` : '';
         let audios = [];
         audios[0] = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(expression)}&type=1`;
-        audios[1] = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(expression)}&type=2`;
+		audios[1] = `https://www.collinsdictionary.com/sounds/hwd_sounds/en_us_${encodeURIComponent(expression)}.mp3`;
+        // audios[1] = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(expression)}&type=2`;
 
         let definitions = [];
         for (const def of defs) {
