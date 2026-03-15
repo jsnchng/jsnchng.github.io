@@ -3,7 +3,7 @@ title: "如何手动离线安装WSL"
 description: 如果你使用LTSC版本的Windows系统（未预装Microsoft Store），或者不想通过Microsoft Store安装WSL，那么只需要多花一点时间，就可以手动离线安装WSL。
 date: 2026-03-14 22:56:00 +0800
 categories: []
-tags: [draft-under-validation]
+tags: [draft-under-validation, 安装Docker]
 ---
 
 ## **1 启用Windows Subsystem for Linux**
@@ -62,7 +62,7 @@ wsl --set-default-version 2
 
 ## **安装之后**
 
-### 一些常用的wsl命令：
+### 一些常用的wsl命令
 
 导入Debian rootfs tarball：
 ```powershell
@@ -167,8 +167,66 @@ wsl --unregister Debian_11.3
 wsl --import Debian_11.3 D:\WSL\Debian_11.3\ D:\WSL\Debian_11.3\1_changeSource.tar --version 2
 ```
 
+## 安装之后2：安装Docker
+
+卸载可能产生冲突的软件包：
+```bash
+sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc podman-docker containerd runc | cut -f1)
+```
+
+向APT配置中添加Docker仓库[^5]：
+```bash
+# Add Docker's official GPG key:
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources（换国内APT源）:
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://mirrors.ustc.edu.cn/docker-ce/linux/debian
+Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+sudo apt update
+```
+
+安装Docker：
+```bash
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# 启用docker服务，需要systemd
+sudo systemctl status docker
+sudo systemctl start docker
+```
+
+配置国内Docker源：
+```bash
+sudo tee /etc/docker/daemon.json > /dev/null <<EOF
+{
+  "registry-mirrors": [
+    "https://docker.m.daocloud.io",
+    "https://mirror.ccs.tencentyun.com",
+    "https://hub-mirror.c.163.com"
+  ]
+}
+EOF
+
+# 重启docker服务
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+# 验证docker源配置结果
+sudo docker run hello-world
+```
+
 ## References
 [^1]: [Step 1 - Enable the Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-1---enable-the-windows-subsystem-for-linux)
 [^2]: [Step 3 - Enable Virtual Machine feature](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-3---enable-virtual-machine-feature)
 [^3]: [How to enable systemd?](https://learn.microsoft.com/en-us/windows/wsl/systemd#how-to-enable-systemd)
 [^4]: [Debian - USTC Mirror Help](https://cmcc.mirrors.ustc.edu.cn/help/debian.html)
+[^5]: [Install using the apt repository](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
